@@ -1,0 +1,6 @@
+sort data.txt & uniq -u 
+
+MDP :
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Here, using "sort" and "uniq" is necessary 
