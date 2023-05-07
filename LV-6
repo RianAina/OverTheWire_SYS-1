@@ -1,0 +1,7 @@
+file ./ -size 1033c
+cat ./maybehere07/.file2
+
+MDP :
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+The file is definied by a size so we used "size"
