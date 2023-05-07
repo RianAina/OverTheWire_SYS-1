@@ -1,0 +1,69 @@
+LV-12
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' 
+
+MDP :
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+LV-13
+
+mkdir /temp/RianAina
+xxd -r data.txt > /temp/RianAina/data.txt
+cd /temp/RianAina
+zcat data.txt | bzcat | zcat | tar xO | tar xO | bzcat | tar xO | zcat
+cd -
+rm -r /temp/RianAina
+
+MDP :
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+LV-14
+
+ssh -i sshkey.private bandit14@localhost
+cat /etc/bandit_pass/bandit14
+
+MDP :
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+LV-15
+
+telnet localhost 30000
+
+MDP :
+BfMYroe26WYalil77FoDi9qh59eK5xN
+
+LV-16
+openssl s_client -connect localhost:30001
+
+MDP :
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+LV-17
+nmap -p 31000-32000 -sV localhost
+echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790
+
+RSA PRIVATE KEY SEARCHING
+
+touch /tmp/key.key
+nano /tmp/key.key
+cd /tmp
+chmod 600 key.key
+ssh -i key.key bandit17@localhost
+LEVEL 17 - 18
+diff passwords.new passwords.old
+
+MDP :
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+LEVEL 18 - 19
+ssh -T bandit18@localhost
+cat readme
+
+MDP :
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+LEVEL 19 - 20
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+MDP :
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
